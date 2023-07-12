@@ -64,14 +64,50 @@ class HomePage extends StatelessWidget {
                   padding: const EdgeInsets.all(20),
                   child: Column(
                     children: [
+                      const SizedBox(
+                        height: 60,
+                      ),
                       Container(
                         padding: const EdgeInsets.all(20),
                         color: Colors.white,
                         decoration: const BoxDecoration(boxShadow: [
                           BoxShadow(
                               color: Color.fromRGBO(225, 95, 27, 0.3),
-                              blurRadius: 20)
+                              blurRadius: 20,
+                              offset: Offset(0, 10))
                         ]),
+                        child: Column(
+                          children: [
+                            Container(
+                              decoration: BoxDecoration(
+                                border: Border(
+                                    bottom: BorderSide(
+                                        color: Colors.grey.shade200)),
+                              ),
+                              child: const TextField(
+                                decoration: InputDecoration(
+                                  hintStyle: TextStyle(color: Colors.grey),
+                                  hintText: "Email or phone number",
+                                  border: InputBorder.none,
+                                ),
+                              ),
+                            ),
+                            Container(
+                              decoration: BoxDecoration(
+                                border: Border(
+                                    bottom: BorderSide(
+                                        color: Colors.grey.shade200)),
+                              ),
+                              child: const TextField(
+                                decoration: InputDecoration(
+                                  hintStyle: TextStyle(color: Colors.grey),
+                                  hintText: "Password",
+                                  border: InputBorder.none,
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
                       )
                     ],
                   ),
